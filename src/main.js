@@ -33,24 +33,9 @@ function Main() {
       {/* Navigation Bar */}
   
 
-// inside return(...)
 
-<nav style={styles.nav}>
-  <ul style={styles.navList}>
-    <li style={styles.navItem}>
-      <Link to="/home" style={styles.navLink}>Home</Link>
-    </li>
-    <li style={styles.navItem}>
-      <Link to="/categories" style={styles.navLink}>Categories</Link>
-    </li>
-    <li style={styles.navItem}>
-      <Link to="/products" style={styles.navLink}>Products</Link>
-    </li>
-    <li style={styles.navItem}>
-      <Link to="/about" style={styles.navLink}>About</Link>
-    </li>
-  </ul>
-</nav>
+
+
 
 
       {/* Search Section */}
