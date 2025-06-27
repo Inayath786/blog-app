@@ -51,7 +51,7 @@ function Main() {
       </div>
 
       {/* Niche Selection */}
-      <h3 style={styles.subheading}>✨ Select a Niche for Your Blogs</h3>
+      <h3 style={styles.subheading}>✨ Select a Niche from the below Blogs</h3>
       <div style={styles.nicheContainer}>
         {Niches.map((niche) => (
           <Link
