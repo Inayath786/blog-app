@@ -28,7 +28,7 @@ import SemiconductorManufacturing from "./Futureprojects/Semiconductor";
 import GreenHydrogenSolar from "./Futureprojects/Greenenergy";
 import MegaInfrastructure from "./Futureprojects/Megainfra";
 
-import { BrowserRouter, Route, Routes,Link } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 function App() {
   return (
     <div className="App">
