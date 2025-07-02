@@ -13,7 +13,7 @@ pipeline {
 
     stage('Checkout Code') {
       steps {
-        git branch: 'master', url: 'https://github.com/Inayath786/blog-app/tree/master'
+        git branch: 'master', url: 'https://github.com/Inayath786/blog-app.git'
       }
     }
 
@@ -37,13 +37,13 @@ pipeline {
       steps {
         withSonarQubeEnv('MySonarQube') {
           dir('client') {
-            sh '''
+            sh """
               npx sonar-scanner \
                 -Dsonar.projectKey=mern-client \
                 -Dsonar.sources=. \
                 -Dsonar.host.url=$SONAR_HOST_URL \
-                -Dsonar.login=$SONARQUBETOKEN
-            '''
+                -Dsonar.login=$SONAR_TOKEN
+            """
           }
         }
       }
@@ -53,13 +53,13 @@ pipeline {
       steps {
         withSonarQubeEnv('MySonarQube') {
           dir('server') {
-            sh '''
+            sh """
               npx sonar-scanner \
                 -Dsonar.projectKey=mern-server \
                 -Dsonar.sources=. \
                 -Dsonar.host.url=$SONAR_HOST_URL \
-                -Dsonar.login=$SONARQUBETOKEN
-            '''
+                -Dsonar.login=$SONAR_TOKEN
+            """
           }
         }
       }
@@ -72,3 +72,4 @@ pipeline {
     }
   }
 }
+
