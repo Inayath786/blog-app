@@ -1,0 +1,53 @@
+name: SonarQube Code Analysis
+
+on:
+  push:
+    branches:
+      - master
+      - main
+
+jobs:
+  sonarqube:
+    name: Run SonarQube Scan
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install dependencies - Client
+        run: |
+          cd client
+          npm install
+
+      - name: Install dependencies - Server
+        run: |
+          cd server
+          npm install
+
+      # Optional: run tests & generate coverage
+      # Uncomment if you have coverage reports
+      # - name: Run client tests
+      #   run: |
+      #     cd client
+      #     npm run test -- --coverage
+
+      # - name: Run server tests
+      #   run: |
+      #     cd server
+      #     npm run test -- --coverage
+
+      - name: Install sonar-scanner
+        run: npm install -g sonar-scanner
+
+      - name: Run SonarQube Scanner
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        run: |
+          sonar-scanner \
+            -Dsonar.login=$SONAR_TOKEN
