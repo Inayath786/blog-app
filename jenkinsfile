@@ -13,7 +13,7 @@ pipeline {
 
     stage('Checkout Code') {
       steps {
-        git branch: 'master', url: 'https://github.com/Inayath786/blog-app'
+        git branch: 'master', url: 'https://github.com/Inayath786/blog-app/tree/master'
       }
     }
 
