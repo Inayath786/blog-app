@@ -3,12 +3,11 @@ name: SonarQube Code Analysis
 on:
   push:
     branches:
-      - master
       - main
+      - master
 
 jobs:
   sonarqube:
-    name: Run SonarQube Scan
     runs-on: ubuntu-latest
 
     steps:
@@ -20,27 +19,12 @@ jobs:
         with:
           node-version: 18
 
-      - name: Install dependencies - Client
-        run: |
-          cd client
-          npm install
+      - name: Install dependencies
+        run: npm install
 
-      - name: Install dependencies - Server
-        run: |
-          cd server
-          npm install
-
-      # Optional: run tests & generate coverage
-      # Uncomment if you have coverage reports
-      # - name: Run client tests
-      #   run: |
-      #     cd client
-      #     npm run test -- --coverage
-
-      # - name: Run server tests
-      #   run: |
-      #     cd server
-      #     npm run test -- --coverage
+      # Optional: run tests
+      # - name: Run tests
+      #   run: npm test -- --watchAll=false
 
       - name: Install sonar-scanner
         run: npm install -g sonar-scanner
@@ -50,4 +34,8 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: |
           sonar-scanner \
+            -Dsonar.projectKey=mern-project \
+            -Dsonar.sources=src \
+            -Dsonar.host.url=http://52.66.105.166:9000 \
             -Dsonar.login=$SONAR_TOKEN
+
