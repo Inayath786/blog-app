@@ -55,6 +55,30 @@ function SemiconductorManufacturing() {
       <p>
         India’s ambition to become a global semiconductor hub is bold yet achievable. With the right policy push, private investment, and global collaboration, India can not only meet its domestic demand but also emerge as a global exporter in the near future.
       </p>
+       {/* Add a coffee button if you want */}
+      <div style={{ textAlign: "center", marginTop: "40px" }}>
+        <a
+          href="https://www.buymeacoffee.com/inayath"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            display: "inline-block",
+            backgroundColor: "#FFDD00",
+            color: "#000",
+            fontWeight: "bold",
+            fontSize: "18px",
+            padding: "12px 24px",
+            borderRadius: "8px",
+            textDecoration: "none",
+            boxShadow: "0 2px 5px rgba(0,0,0,0.3)",
+            transition: "transform 0.2s",
+          }}
+          onMouseOver={(e) => (e.currentTarget.style.transform = "scale(1.05)")}
+          onMouseOut={(e) => (e.currentTarget.style.transform = "scale(1)")}
+        >
+          ☕ Buy Me a Coffee
+        </a>
+      </div>
     </div>
   );
 }

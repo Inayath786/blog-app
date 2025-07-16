@@ -51,6 +51,30 @@ const ForestConservation = () => {
       <p style={styles.closing}>
         Every tree matters. Forest conservation is not just about protecting nature — it’s about securing a future where humans and ecosystems thrive together.
       </p>
+       {/* Add a coffee button if you want */}
+      <div style={{ textAlign: "center", marginTop: "40px" }}>
+        <a
+          href="https://www.buymeacoffee.com/inayath"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            display: "inline-block",
+            backgroundColor: "#FFDD00",
+            color: "#000",
+            fontWeight: "bold",
+            fontSize: "18px",
+            padding: "12px 24px",
+            borderRadius: "8px",
+            textDecoration: "none",
+            boxShadow: "0 2px 5px rgba(0,0,0,0.3)",
+            transition: "transform 0.2s",
+          }}
+          onMouseOver={(e) => (e.currentTarget.style.transform = "scale(1.05)")}
+          onMouseOut={(e) => (e.currentTarget.style.transform = "scale(1)")}
+        >
+          ☕ Buy Me a Coffee
+        </a>
+      </div>
     </div>
   );
 };
