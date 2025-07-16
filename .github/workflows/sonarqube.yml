@@ -1,0 +1,41 @@
+name: SonarQube Code Analysis
+
+on:
+  push:
+    branches:
+      - main
+      - master
+
+jobs:
+  sonarqube:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm install
+
+      # Optional: run tests
+      # - name: Run tests
+      #   run: npm test -- --watchAll=false
+
+      - name: Install sonar-scanner
+        run: npm install -g sonar-scanner
+
+      - name: Run SonarQube Scanner
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        run: |
+          sonar-scanner \
+            -Dsonar.projectKey=mern-project \
+            -Dsonar.sources=src \
+            -Dsonar.host.url=http://52.66.105.166:9000 \
+            -Dsonar.login=$SONAR_TOKEN
+

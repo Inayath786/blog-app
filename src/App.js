@@ -27,11 +27,18 @@ import GaganyaanMission from "./Futureprojects/Gagaanyan";
 import SemiconductorManufacturing from "./Futureprojects/Semiconductor";
 import GreenHydrogenSolar from "./Futureprojects/Greenenergy";
 import MegaInfrastructure from "./Futureprojects/Megainfra";
+import { Helmet } from "react-helmet";
 
-import { BrowserRouter, Route, Routes,Link } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 function App() {
   return (
     <div className="App">
+       <Helmet>
+        <script async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3425783300028526"
+          crossOrigin="anonymous"
+        ></script>
+      </Helmet>
       <BrowserRouter>
       <Routes>  
         <Route path="/" element={<Main/>}></Route>
