@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import NewsletterSignup from "./NewsLetterSignup";
 
 function Main() {
   const [originalNiches] = useState([
@@ -29,6 +30,7 @@ function Main() {
   return (
     <div style={styles.container}>
       <h1 style={styles.heading}>🚀 Welcome to the Blogs Page</h1>
+      <NewsletterSignup/>
 
       {/* Navigation Bar */}
   
