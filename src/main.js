@@ -4,11 +4,11 @@ import NewsletterSignup from "./NewsLetterSignup";
 
 function Main() {
   const [originalNiches] = useState([
-    { id: 1, text: "Cinema", status: "Pending" },
-    { id: 2, text: "System_design", status: "Pending" },
-    { id: 3, text: "Environment", status: "Pending" },
-    { id: 4, text: "AroundtheWorld", status: "Pending" },
-     { id: 4, text: "Indian_Projects", status: "Pending" }
+    
+    { id: 1, text: "System_design", status: "Pending" },
+    
+    { id: 2, text: "AroundtheWorld", status: "Pending" },
+     { id: 3, text: "Indian_Projects", status: "Pending" }
   ]);
 
   const [Niches, setNiches] = useState(originalNiches);
