@@ -4,7 +4,7 @@ function NewsletterSignup() {
       <h3>📬 Subscribe to My Newsletter</h3>
       <p>Get weekly system design insights, dev tips, and finance hacks!</p>
       <iframe
-        src="https://inayath1.substack.com/embed"
+        src="https://financialadvicer.substack.com/embed.js"
         width="100%"
         height="320"
         style={{ border: "1px solid #ccc", background: "white" }}
