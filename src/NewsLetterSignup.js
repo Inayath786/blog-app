@@ -1,17 +1,19 @@
-function NewsletterSignup() {
+import { useEffect } from "react";
+
+export default function NewsletterSignup() {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://financialadvicer.substack.com/embed.js";
+    script.async = true;
+    script.charset = "utf-8";
+    document.body.appendChild(script);
+  }, []);
+
   return (
-    <div style={{ padding: "2rem", background: "#f4f4f4", borderRadius: "10px" }}>
-      <h3>📬 Subscribe to My Newsletter</h3>
-      <p>Get weekly system design insights, dev tips, and finance hacks!</p>
-      <iframe
-        src="https://financialadvicer.substack.com/embed.js"
-        width="100%"
-        height="320"
-        style={{ border: "1px solid #ccc", background: "white" }}
-        frameBorder="0"
-        scrolling="no"
-      ></iframe>
-    </div>
+    <div
+      className="substack-subscribe"
+      data-embed="subscribe"
+      style={{ marginTop: "20px" }}
+    />
   );
 }
-export default NewsletterSignup
