@@ -31,15 +31,8 @@ function Main() {
   return (
     <div style={styles.container}>
       <h1 style={styles.heading}>🚀 Welcome to the Blogs Page</h1>
+      
       <NewsletterSignup/>
-
-      {/* Navigation Bar */}
-  
-
-
-
-
-
 
       {/* Search Section */}
       <div style={styles.searchSection}>
