@@ -103,6 +103,15 @@ function BlackFileAccess() {
         >
          UPI is Free Credit Card Charges. But who gains?
         </Link>
+
+         <Link
+          to="/blackfile/emicharges"
+          style={linkStyle}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
+         Why Big Brands Beg you to buy on EMI?
+        </Link>
       </div>
     </div>
   );

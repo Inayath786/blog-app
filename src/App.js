@@ -27,6 +27,7 @@ import CashDeposit from "./BlackFileAccess/CashDeposit";
 import RichnoBanks from "./BlackFileAccess/RichnoBanks";
 import ZeroTaxes from "./BlackFileAccess/ZeroTaxes";
 import CreditCharges from "./BlackFileAccess/CreditCharges";
+import EMIBlog from "./BlackFileAccess/EMIBlog";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 function App() {
@@ -56,6 +57,7 @@ function App() {
           <Route path="/blackfile/richbanks" element={<RichnoBanks/>}></Route>
           <Route path="/blackfile/zerotaxes" element={<ZeroTaxes/>}/>
           <Route path="/blackfile/creditcharges" element={<CreditCharges/>}></Route>
+          <Route path="/blackfile/emicharges" element={<EMIBlog/>}></Route>
             <Route path="/global/russia-ukraine" element={<RussiaUkraineWar/>}></Route>
             <Route path="/global/middle-east" element={<MiddleEastConflict/>}></Route>
             <Route path="/global/us-china" element={<UsChinaTradeWar/>}></Route>
